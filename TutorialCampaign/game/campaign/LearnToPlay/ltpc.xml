@@ -1,0 +1,75 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!-- Template and Campaign Tutorial/Documentation Guide -->
+
+<Campaign>
+<!-- This section includes your base campaign data -->
+	<!-- This is the name and description of your campaign, as it appears in the Custom Campaign menu, this references text in your stringmods.txt -->
+    <DisplayNameStringID>STR_L2P_CAMPAIGN</DisplayNameStringID>
+    <RolloverStringID>STR_L2P_CAMPAIGN_TOOLTIP</RolloverStringID>
+	<!-- MotifImage is the shiny metallic icon for the base campaigns - custom campaigns don't appear to display one -->
+    <MotifImage>/resources/front_end_demo/Foil_FOTT.png</MotifImage>
+	<!-- This is the map background your campaign will take place on, and where Pins will be placed -->
+    <MapImage>ui/campaign_map/map_fott</MapImage>
+    
+    <CampaignNode>
+		<!-- The folder and filename of your scenarios -->
+        <Filename>LearnToPlay\Tutorial1</Filename>
+		<!-- Same as above, the Name and Description of the level referenced to your stringmods.txt -->
+        <DisplayNameStringID>STR_L2P1_CAMPAIGN</DisplayNameStringID>
+        <RolloverStringID>STR_L2P1_CAMPAIGN_TOOLTIP</RolloverStringID>
+		<!-- BackgroundImage is what appears during the Loading Screen in the Background -->
+        <BackgroundImage>resources\campaign\tutorial_01.png</BackgroundImage>
+		<!-- LoadImage is what appears during the Loading Screen in the Foreground, within the frame -->
+        <LoadImage>resources\campaign\tutorial_01.png</LoadImage>
+		<!-- Pins are the map markers, along with the location on your map image they should be placed at -->
+        <PinImage>ui\campaign_map\pins\31_WelcomeBack_512</PinImage>
+        <PinXPosition>0.35</PinXPosition>
+        <PinYPosition>0.34</PinYPosition>
+        <PinZoom>1.0</PinZoom>
+    </CampaignNode>
+	
+<!-- Other potential options that can be used: 
+	- This will Override the map image defined in <MapImage> with another, often used when a campaign changes primary location
+		<MapImageOverride>ui/campaign_map/map_atlantis</MapImageOverride>
+		
+	- The following two tags are used on cinematic scenarios, so they are not visible in the campaign list.
+		<Visible>0</Visible>
+		<Cinematic>1</Cinematic>
+		
+	- This is an example of the structure for a cinematic scenario from Fall of the Trident
+	
+    <CampaignNode>
+        <Filename>fott\cinematics\fott01_b</Filename>
+        <Visible>0</Visible>
+        <Cinematic>1</Cinematic>
+    </CampaignNode>
+	
+	- Since these are invisible to players on the list, they do not need most data. -->
+	
+    <CampaignNode>
+        <Filename>LearnToPlay\Tutorial2</Filename>
+        <PrereqScenarioFile>LearnToPlay\Tutorial1</PrereqScenarioFile>
+        <DisplayNameStringID>STR_L2P2_CAMPAIGN</DisplayNameStringID>
+        <RolloverStringID>STR_L2P2_CAMPAIGN_TOOLTIP</RolloverStringID>
+        <BackgroundImage>resources\campaign\tutorial_01.png</BackgroundImage>
+        <LoadImage>resources\campaign\tutorial_01.png</LoadImage>
+        <PinImage>ui\campaign_map\pins\pin_01</PinImage>
+        <PinXPosition>0.36</PinXPosition>
+        <PinYPosition>0.30</PinYPosition>
+        <PinZoom>1.0</PinZoom>
+    </CampaignNode>
+    
+    <CampaignNode>
+        <Filename>LearnToPlay\Tutorial3</Filename>
+        <PrereqScenarioFile>LearnToPlay\Tutorial2</PrereqScenarioFile>
+        <DisplayNameStringID>STR_L2P3_CAMPAIGN</DisplayNameStringID>
+        <RolloverStringID>STR_L2P3_CAMPAIGN_TOOLTIP</RolloverStringID>
+        <BackgroundImage>resources\campaign\tutorial_01.png</BackgroundImage>
+        <LoadImage>resources\campaign\tutorial_01.png</LoadImage>
+        <PinImage>ui\campaign_map\pins\pin_03</PinImage>
+        <PinXPosition>0.36</PinXPosition>
+        <PinYPosition>0.30</PinYPosition>
+        <PinZoom>1.0</PinZoom>
+    </CampaignNode>
+</Campaign>

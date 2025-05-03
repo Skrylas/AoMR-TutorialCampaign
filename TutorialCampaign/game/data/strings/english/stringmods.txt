@@ -1,0 +1,11 @@
+Language = "English"
+IsRtl = "False"
+
+ID = "STR_L2P_CAMPAIGN"   ;   Str = "Learn to Play"
+ID = "STR_L2P_CAMPAIGN_TOOLTIP"   ;   Str = "Discover what you will see and do while playing Age of Mythology."
+ID = "STR_L2P1_CAMPAIGN"   ;   Str = "Hunt for a Killer"
+ID = "STR_L2P1_CAMPAIGN_TOOLTIP"   ;   Str = "See how to select units and issue commands."
+ID = "STR_L2P2_CAMPAIGN"   ;   Str = "Pleasing the Gods"
+ID = "STR_L2P2_CAMPAIGN_TOOLTIP"   ;   Str = "How to gather resources and build buildings."
+ID = "STR_L2P3_CAMPAIGN"   ;   Str = "Uninvited Guests"
+ID = "STR_L2P3_CAMPAIGN_TOOLTIP"   ;   Str = "Train soldiers and advance through the Ages."
