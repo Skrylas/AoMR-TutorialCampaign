@@ -1,17 +1,15 @@
-Welcome to the Tutorial Campaign, Campaign Tutorial.
-A remake of the original AoM Tutorial, while also being a tutorial on how to make your own campaign.
+# File Structure and Uploading
 
-Making your own Campaign for Age of Mythology Retold can be easy, but includes several steps:
-
-## Location of your Campaign Files: ##
-1) Locate your AoMR Mods Folder at: C:\Users\USERNAME\Games\Age of Mythology Retold\STEAMUSERID\mods
+## Location of your Campaign Files:
+1) Locate your AoMR Mods Folder at: `C:\Users\USERNAME\Games\Age of Mythology Retold\STEAMUSERID\mods`
 2) Open the local folder.
-3) Create a new folder - this will be the name of your campaign.  Once we have created a local copy, it can be uploaded to the in-game mod manager.
+3) Create a new folder - this will be the name of your campaign.  Once we have created a local copy, it can be uploaded to the in-game mod manager or on the website.
 
-## File Structure: ##
-1) Inside your newly named folder, you should create a folder named "game" - this will hold ALL campaign files.
-2) The following folder structure depicts all possible folders and files you may use, this guide will cover all of them.
-
+## File Structure:
+1) Inside your newly named folder, you should create a folder named "game" - this will hold **ALL** campaign files.
+2) The following folder structure depicts possible folders and files you may use, this guide will cover these.
+   
+```
 game
 ├───campaign
 │   └───YOUR_CAMPAIGN_NAME
@@ -31,60 +29,109 @@ game
     └───resources*
         └───YOUR_CAMPAIGN_NAME*
             └───CAMPAIGN_IMAGES.png*
+```
 
-  *  optional files - can be included if your campaign makes use of them
-  ** or another language or multiple
-	Currently there appears to be an issue where multiple languages cannot be properly swaped between in custom campaigns.
+  `*  optional files - can be included if your campaign makes use of them`  
+  `** or another language or multiple`  
+  		`Currently there appears to be an issue where multiple languages cannot be properly swapped between in custom campaigns.  If someone discovers that this has been fixed, please let me know.`  
 
 The above file structure largely replicates the base AOMR file structure.
+
 As noted, the only 2 mandatory folders are the actual Campaign folder, which contains your scenarios, and the Strings folder which tells the game what the name of the Campaign and the Scenarios are.
 
-## Campaign Folder: ##
-Inside your campaign folder there will be an .xml file, which determines what files are loaded, in what order, and what is displayed for each.
-This folder should also include all scenarios that you wish to be loaded as part of your campaign, both playable and cinematics.
+### Campaign Folder:
+The Campaign folder will contain two things ([Tutorial Example](https://github.com/Skrylas/AoMR-TutorialCampaign/tree/main/TutorialCampaign/game/campaign/LearnToPlay)):
+- `CampaignName.xml`
+- `CampaignScenarios.mythscn`
 
-Open the included campaign.xml for notes and references on how to setup your campaign file: 
-	\TutorialCampaign\game\campaign\LearnToPlay\ltpc.xml
+The .xml file included with your campaign is what creates your campaign inside the game.  It is what controls the names, descriptions, level order, and other details.  
+- [Campaign.xml Setup Guidance](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/XML%20Guidance.md)  
+- [Example .xml file from the Tutorial Campaign with notes](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/TutorialCampaign/game/campaign/LearnToPlay/ltpc.xml)  
 
-This can also be used as a template for your own campaign.
+The .mythscn files are your levels themselves, created within the editor.  
+You can also include Subfolders, such as a `game\campaign\YourCampaignName\cinematics` folder.
+- This is purely for organizational purposes to help keep track of your missions.  The .xml file can reference any folders or subfolders contained within the main `game\campaign` folder.
+    - This can allow you to reference other campaigns, or even include two campaigns inside the same Mod that reference each other.
 
-## Data Folder: ##
-Must always include a Stringmods.txt file - this includes Text strings that tell the game what your campaign is named, and the name of your scenarios.  These will be referenced in the above campaign.xml file.
-Stringmods can also be used to create recurring texts to be references in your campaign - you can also reference the existing base strings.
+### Data Folder:
+This folder is included for a `Stringmods.txt` file.
+- This includes Text strings that tell the game what your campaign is named, and the name of your scenarios.  These will be referenced in the above campaign.xml file.
+Stringmods can also be used to create recurring strings of text for your campaign, such as Civ names, Dialogue, etc.  You can also reference the existing base strings included in the game.
+- [Tips guidance](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Tips.md) includes some things that can be accomplished with Stringmods.
 
 The Data folder can also include various datamods that are included as part of your campaign these can include Proto and TechTree mods if you have them.
 This guide won't get into data modding.
 
-When you upload your Campaign into the Mod Manager, it will be tagged as a Datamod due to the usage of Stringmods.txt, but it does not count as a Datamod for purposes of Multiplayer, or Celestial Challenges.
-This is only for the in-game mod manager.
-If you upload it on the website, make sure not to Tag it as a Datamod, or it will count as one.
+- **Note:** When you upload your Campaign into the Mod Manager, it will be automatically tagged as a Datamod due to the inclusion of a Data folder.  But Stringmods.txt do **NOT** count as a Datamod for purposes of Multiplayer, or Celestial Challenges.  If you upload it on the website, the Datamod checkbox will be automatically checked, but you can manually uncheck this.
+- **Datamodding:** While Datamodding will require your campaign to be toggled off to play Ranked or Celestial Challenges, there is little downside to this, and can enhance your Campaign's functionality.  
+    - The [Crybar Editor](https://github.com/CryShana/CryBarEditor/tree/main) includes a guide on [modding basics](https://github.com/CryShana/CryBarEditor/blob/main/Documentation/Modding.md).
+    - It is highly reccomended to make your DataMods Additive to maintain compatibility with new civs, content and patches the Devs may add, and compatibility with your fellow modders.
 
-## Sound Folder: ##
-Can contain any sounds you want to reference in your campaign.  As long as the file-path matches, these can be played in a Dialogue/Sound trigger.
-These DO NOT need to be in the new FMOD/Bank format.
+### Sound Folder:
+Can contain any sounds you want to reference in your campaign.  As long as the file-path matches, these can be played in a Dialogue or Sound trigger.
+These **DO NOT** need to be in the new FMOD/Bank format.  Including standard .mp3 or .wav can be played without issue.
 
-To reference sounds used in this folder in Dialogue/Sound triggers, the path must be everything after the base sound folder.
-For example, if you included a file named Test.mp3 directly in the Sound folder with no subfolders, it should just be referenced in-game as Test.mp3.  To prevent conflicts, it is recommended that you include a Subfolder of your Campaign name.
+To reference sounds used in this folder in a Dialogue or Sound trigger, the path must be everything after the base sound folder.  
+- For example, if you included a file named `Example.mp3` directly in the Sound folder with no subfolders at `game\sound\Example.mp3`, it should be referenced in-game as `Example.mp3`.  
+    - To prevent conflicts with other campaigns, it is recommended that you include a Subfolder of your Campaign name of `game\sound\YourCampaignName\Example.mp3` to be referenced in game as `YourCampaignName\Example.mp3`  
+- This is covered a bit more inside the [Basic Campaign Trigger](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Triggers.md) documentation.
 
-## UI Folder: ##
+### UI Folder:
 Can contain any UI elements you wish to reference in your campaign:
-Talking heads, icons, spotlight images, campaign map backgrounds, pins, loading screens, etc.
-Same as Sound, as long as the file-path matches when they are referenced, they can be used in-game and in the campaign.xml.
+- Talking heads, icons, spotlight images, campaign map backgrounds, pins, loading screens, etc.
+- The file-path must just match when they are referenced.
+    - Included images can be used in game and in the Campaign.xml.
 
-## Uploading Your Campaign: ##
-Once your campaign is complete, it can be uploaded from the in-game mod manager, or on the Age of Empires website.
-Note: The mod is tied to the account that uploaded it, if you use different accounts, such as playing in-game on Steam, and using a Microsoft Account for the website.
-As long as you use the same account for both, you can manage and update your Campaign from both sources, no matter which you used to initially upload it.
+## Uploading Your Campaign:
+Once your campaign is complete, it can be uploaded in two ways:
+- In-game Mod Manager
+- [Age of Empires website](https://www.ageofempires.com/mods/)
 
-Publishing is easily done from the in-game manager.  You simply click View on your Local Mod in the manager, and then Publish.
+Whenever a mod is uploaded on either source, it syncs to the other.  Although there can be text formatting and feature differences, they will share the same files and description.
+- A mod uploaded initially on either platform can be edited on the other.
+    - For example:  I can upload my Campaign in-game, and then go on the website to upload an update.
+    - **Note:** The mod is tied to the account that uploaded it.  If you use two different accounts, such as playing in-game on Steam, and using a Microsoft Account for the website, you may run into issues managing the mods of your other account.  As long as you use the same account for both, you can manage and update your Campaign from both sources, no matter which you used to initially upload it.
 
-From the website manager, the campaign needs to be uploading in a .zip folder as follows:
-	CampaignName.zip/game
-Do not include a subfolder of your Campaign Name inside the .zip folder, or it will not show up.
+### In-Game Mod Manager
+Publishing is easily done from the in-game manager.  
+- Find your Local Copy inside the Mod Manager
+    - As indicated by a Blue Folder Icon (when unpublished)
+- Click View
+- Click **Publish Your Mod**
 
-When uploading on the website, it should also NOT be tagged as a Datamod, or it will be incompatible with Multiplayer.  
+### Website Mods
+Publishing on the Website requires making a .zip filder of your mod/campaign
+- Create a `YourCampaignName.zip` folder that contains a `game` folder with all subfolders.  For example:
+    - `game\campaign\YourCampaignName`
+    - `game\data\strings`
+    - This should **NOT** include a subfolder of your mod name, it should directly be the `game` folder.  The .zip acts as your ModNameFolder.
+- Log in to the website with your chosen account (Steam / MS), and click Submit a Mod.
+- Make sure to Select Age of Mythology, and fill in the details.
+    - Uncheck the Datamod box if its automatically been tagged as one.
+    - The Allow Discussions checkbox automatically creates a forum thread for your mod
 
+### Differences between the two
+- The website has higher res photos
+    - And allows for up to 5 photos while the in-game mod manager only allows 1.
+- The website allows for people to leave comments when they leave a review, in-game they can only leave a star rating.
+- The website has a Changelog feature, allowing you to leave a record of your changes.
+     - The changelog does not show in-game, for this reason I personally tend to leave important changes in the mod description.
 
-## Updating Your Campaign: ##
-Updating is done similarly.  All changes will be made to your local copy, and you will have a button to Update the Online version.
-If you no longer have a local copy, you can browse to your Online version, and click the button that says "Make Local Copy".
+## Updating Your Campaign:
+Updating is done similar to Uploading.
+
+### In-Game Mod Manager Update
+- If you have a Local Copy of your Mod, proceed to Step 2, otherwise:
+    - Find your mod in the Mod Browser
+    - Click View
+    - Click Make Local Copy (if there is an error, default to website updates)
+- Find your Local Copy inside the Mod Manager
+    - As indicated by a Pink Folder Icon (now that its published)
+- Click View
+- Click Upload Update
+
+### Website Mod Update
+- Sign In and Click My Mods
+    - Change AoE2 to AoM
+ - Open your mod and click Edit Mod
+ - Make changes and upload a new .zip file with your updated files
