@@ -135,3 +135,4 @@ Updating is done similar to Uploading.
     - Change AoE2 to AoM
  - Open your mod and click Edit Mod
  - Make changes and upload a new .zip file with your updated files
+    - If you have lost your original files, you can always subscribe to your mod to download a copy.
