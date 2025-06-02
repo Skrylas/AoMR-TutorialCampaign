@@ -6,6 +6,7 @@
 <!-- This section includes your base campaign data -->
 	<!-- This is the name and description of your campaign, as it appears in the Custom Campaign menu, this references text in your stringmods.txt -->
     <DisplayNameStringID>STR_L2P_CAMPAIGN</DisplayNameStringID>
+	<!-- The Description of your campaign, custom campaigns appear to not have one -->
     <RolloverStringID>STR_L2P_CAMPAIGN_TOOLTIP</RolloverStringID>
 	<!-- MotifImage is the shiny metallic icon for the base campaigns - custom campaigns don't appear to display one -->
     <MotifImage>/resources/front_end_demo/Foil_FOTT.png</MotifImage>
@@ -18,9 +19,9 @@
 		<!-- Same as above, the Name and Description of the level referenced to your stringmods.txt -->
         <DisplayNameStringID>STR_L2P1_CAMPAIGN</DisplayNameStringID>
         <RolloverStringID>STR_L2P1_CAMPAIGN_TOOLTIP</RolloverStringID>
-		<!-- BackgroundImage is what appears during the Loading Screen in the Background -->
+		<!-- BackgroundImage is what appears during the Loading Screen in the Background and Foreground -->
         <BackgroundImage>resources\campaign\tutorial_01.png</BackgroundImage>
-		<!-- LoadImage is what appears during the Loading Screen in the Foreground, within the frame -->
+		<!-- LoadImage does not appear to be used -->
         <LoadImage>resources\campaign\tutorial_01.png</LoadImage>
 		<!-- Pins are the map markers, along with the location on your map image they should be placed at -->
         <PinImage>ui\campaign_map\pins\31_WelcomeBack_512</PinImage>
