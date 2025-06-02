@@ -8,8 +8,8 @@ Available through the [Mod Manager](https://www.ageofempires.com/mods/details/35
    
 ## Making Your Own:
 - [File Setup Guide](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Files.md)
-- [Campaign XML](https://github.com/Skrylas/AoMR-TutorialCampaign/edit/main/Docs/XML%20Guidance.md)
-- [Strings](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Tips.md)
+- [Campaign XML](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/XML%20Guidance.md)
+- [Strings](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Strings.md)
 - [Campaign Triggers](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Triggers.md)
 
 ## Useful Tools:
