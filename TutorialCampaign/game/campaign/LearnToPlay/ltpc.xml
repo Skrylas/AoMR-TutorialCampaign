@@ -50,6 +50,7 @@
 	
     <CampaignNode>
         <Filename>LearnToPlay\Tutorial2</Filename>
+	<!-- The mission that must be beaten for this to be visible.  Not including a PreReq makes this always visible -->
         <PrereqScenarioFile>LearnToPlay\Tutorial1</PrereqScenarioFile>
         <DisplayNameStringID>STR_L2P2_CAMPAIGN</DisplayNameStringID>
         <RolloverStringID>STR_L2P2_CAMPAIGN_TOOLTIP</RolloverStringID>
