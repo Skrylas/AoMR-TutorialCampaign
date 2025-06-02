@@ -58,3 +58,6 @@ The main Campaigns tend to use a fairly standard 5 Victory and Loss triggers, th
      - Music: Stop / Sound: Block All Sounds
 - **Win_3**
      - Campaign: Advance to the Next Mission / Campaign: Advance to the Next Mission Prompt
+ 
+## Misc:
+It appears that Scenarios when part of a Campaign start in Cinematic Mode.  If the Mission is not intended to start in Cinematic Mode, you should have a Trigger to Enter and Exit Cinematic Mode immediately on start.
