@@ -9,7 +9,12 @@ For examples look at:
 - [The example included here](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/TutorialCampaign/game/campaign/LearnToPlay/ltpc.xml)
 - The default files `steamapps\common\Age of Mythology Retold\game\campaign\fott\fott.xml`
 
-## Campaign Info
+## .xml Tags
+Your .xml file should include the folowing:
+`<?xml version = "1.0" encoding = "UTF-8"?>`
+And the entire file should be wrapped in a `<Campaign> </Campaign>` tag.
+
+
 Your Campaign info itself is handled by the base information at the top:
 
 | Campaign Header Tag | Effect |
@@ -20,7 +25,7 @@ Your Campaign info itself is handled by the base information at the top:
 |`<MapImage>`|The map that your campaign is based on, where pins will be placed.  Default maps are stored in `game\art\ui\campaign_map`.  Excluding this tag will load a generic background, but not allow Pins to show, there needs to be a map for them to be placed on.|
 |~~`<CompendiumImage>`~~|Only for default campaigns, unless you were going to edit the Compendium files.|
 |~~`<CompendiumTopic>`~~|Only for default campaigns, unless you were going to edit the Compendium files.|
-|~~`<HideFromMainPage>`~~|Does not appear to be needed.  The Mythical Battle uses this tag, Custom Campaigns do not need it.|
+|~~`<HideFromMainPage>`~~|Value of 1 to hide.  Does not appear to be needed.  The Mythical Battle uses this tag, Custom Campaigns do not need it.|
 
 Each individual Playable Scenario or Cinematic Scenario in your Campaign will also need a Campaign Node.
 Each Scenario should start and end with a `<CampaignNode> </CampaignNode>` and can include the following tags:
@@ -38,6 +43,10 @@ Each Scenario should start and end with a `<CampaignNode> </CampaignNode>` and c
 |`<PinYPosition>`|The Y coordinate of where the Pin is placed on the map. Appears to be percentage based, and should be between 0.0 and 1.0|
 |`<PinZoom>`|Controls how zoomed out the map is for numbers between 0.0 and 1.0.  Numbers above 1.0 default to 1.0 zoom.  The lower the number the more zoomed out the map is.|
 |`<PrereqScenarioFile>`|Should match the `<Filename>` of the Scenario that takes place before this.  This tag hides the Scenario until the PrereqScenario is beaten.  If this tag is NOT included, then it will always be visible and selectable.|
-|`<HasPrompt/>`|Creates a Prompt at the start of the mission.  Used in the Default Campaigns for asking the player if they want to view the Tutorial Cinematic.
+|`<HasPrompt/>`|Creates a Yes/No Prompt at the start of the mission to load the Scenario listed before this one in the .xml file.  In the Default Campaign this is used to load the `tutorial\ccnor` Norse Tutorial, which is listed as a hidden scenario in the fott.xml and mythb.xml.  Requires a `<PromptStringID>` tag to have a description.|
+|`<PromptStringID>`|Gives the above tag a description. ![image](https://github.com/user-attachments/assets/20d3aa1e-0fca-4dae-8cab-93b7fddd5c13)|
+|`<Visible>`|When set to 0 hides the campaign from the mission list. Not needed if the mission is meant to be visible.  Typically used for Cinematic Scenarios or Prompted tutorials.|
+|`<Cinematic>`|When set to 1 marks the mission as a cinematic.  Not used otherwise.  It is not apparent what this does.|
+|`<PlayCinematic/>`| Introduced in POTG and only used in the POTG.xml on all missions that precede a Cinematic Mission.  Appears to replace the prior `Cinematic` tag, as POTG cinematics are not tagged as cinematics, instead tagging the prior mission with this.|
 
 
