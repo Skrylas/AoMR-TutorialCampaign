@@ -11,3 +11,8 @@ Available through the [Mod Manager](https://www.ageofempires.com/mods/details/35
 - [Campaign XML](https://github.com/Skrylas/AoMR-TutorialCampaign/edit/main/Docs/XML%20Guidance.md)
 - [Strings](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Tips.md)
 - [Campaign Triggers](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Triggers.md)
+
+## Useful Tools:
+These allow extracting base game assets such as StringTables, Campaign maps, Pins, and other UI elements for usage in your campaign.
+- [CryBarEditor](https://github.com/CryShana/CryBarEditor/tree/main)
+- [AoMR .BAR Extractor v0.7](https://forums.ageofempires.com/t/v-0-7-resource-manager-age-of-myth-retold-bar-extractor/260136)
