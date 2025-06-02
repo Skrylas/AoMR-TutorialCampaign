@@ -1,4 +1,22 @@
-# Miscellaneous Tips
+# Strings
+
+Strings file is required for Campaign Names and Descriptions, but can also be used for any other text in the game.
+Utilizing Strings allows you to put all text in a single file/location for proof-reading and editing, and strings can be reused across your missions, allowing a single edit to change all instances.
+
+## File Setup
+For examples look at:
+- [The example included here](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/TutorialCampaign/game/data/strings/english/stringmods.txt)
+- The default files located at `game\data\strings` (requires a .BAR extractor)
+
+Your file should include these two lines:
+```
+Language = "English"
+IsRtl = "False"
+```
+And then an Entry for each String.
+`ID = "YOUR_STRING_ID"   ;   Str = "Your text here."`
+The string ID should be Unique, and the text contained within the two quotes can be anything, and can include icons and color tags as described below.
+
 
 ## Text Strings
 Text strings in the `stringmods.txt` file can include colors and images.
