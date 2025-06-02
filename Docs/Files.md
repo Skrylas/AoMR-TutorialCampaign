@@ -57,7 +57,7 @@ You can also include Subfolders, such as a `game\campaign\YourCampaignName\cinem
 This folder is included for a `Stringmods.txt` file.
 - This includes Text strings that tell the game what your campaign is named, and the name of your scenarios.  These will be referenced in the above campaign.xml file.
 Stringmods can also be used to create recurring strings of text for your campaign, such as Civ names, Dialogue, etc.  You can also reference the existing base strings included in the game.
-- [Tips guidance](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Tips.md) includes some things that can be accomplished with Stringmods.
+- [Strings guide](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Strings.md) includes some things that can be accomplished with Stringmods.
 
 The Data folder can also include various datamods that are included as part of your campaign these can include Proto and TechTree mods if you have them.
 This guide won't get into data modding.
