@@ -73,14 +73,15 @@ These **DO NOT** need to be in the new FMOD/Bank format.  Including standard .mp
 
 To reference sounds used in this folder in a Dialogue or Sound trigger, the path must be everything after the base sound folder.  
 - For example, if you included a file named `Example.mp3` directly in the Sound folder with no subfolders at `game\sound\Example.mp3`, it should be referenced in-game as `Example.mp3`.  
-    - To prevent conflicts with other campaigns, it is recommended that you include a Subfolder of your Campaign name of `game\sound\YourCampaignName\Example.mp3` to be referenced in game as `YourCampaignName\Example.mp3`  
-- This is covered a bit more inside the [Basic Campaign Trigger](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Triggers.md) documentation.
+    - To prevent conflicts with other campaigns, it is recommended that you include a Subfolder of your Campaign name of `game\sound\YourCampaignName\Example.mp3` to be referenced in game as `YourCampaignName\Example.mp3`
+    - Sounds must be inside the Sound folder, for example a default sound is played by referencing `events\win.wav` which is contained inside `game\sound\events\win.wav`
 
 ### UI Folder:
 Can contain any UI elements you wish to reference in your campaign:
 - Talking heads, icons, spotlight images, campaign map backgrounds, pins, loading screens, etc.
 - The file-path must just match when they are referenced.
     - Included images can be used in game and in the Campaign.xml.
+    - References tend to start at the resources folder.  For example: `<icon=\"(518,147)(resources\in_game\Victory_Defeated\victory_hades_top_ornament.png)\">`
 
 ## Uploading Your Campaign:
 Once your campaign is complete, it can be uploaded in two ways:
