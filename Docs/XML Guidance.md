@@ -46,7 +46,7 @@ Each Scenario should start and end with a `<CampaignNode> </CampaignNode>` and c
 |`<HasPrompt/>`|Creates a Yes/No Prompt at the start of the mission to load the Scenario listed before this one in the .xml file.  In the Default Campaign this is used to load the `tutorial\ccnor` Norse Tutorial, which is listed as a hidden scenario in the fott.xml and mythb.xml.  Requires a `<PromptStringID>` tag to have a description.|
 |`<PromptStringID>`|Gives the above tag a description. ![image](https://github.com/user-attachments/assets/20d3aa1e-0fca-4dae-8cab-93b7fddd5c13)|
 |`<Visible>`|When set to 0 hides the campaign from the mission list. Not needed if the mission is meant to be visible.  Typically used for Cinematic Scenarios or Prompted tutorials.|
-|`<Cinematic>`|When set to 1 marks the mission as a cinematic.  Not used otherwise.  It is not apparent what this does.|
+|`<Cinematic>`|When set to 1 marks the mission as a cinematic.  It is not used on non-cinematic missions.  It is not apparent what this does.|
 |`<PlayCinematic/>`| Introduced in POTG and only used in the POTG.xml on all missions that precede a Cinematic Mission.  Appears to replace the prior `Cinematic` tag, as POTG cinematics are not tagged as cinematics, instead tagging the prior mission with this.|
 
 
