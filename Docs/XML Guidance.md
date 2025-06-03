@@ -3,7 +3,8 @@
 ## The Main .xml File
 `game\campaign\YourCampaignName\YourCampaignName.xml`
 
-The Campaign.xml file is required to tell the game what your Campagin is named, what the scenarios in the campaign are, and the order they show up in.  Missions are played in the order that they are set in the Campaign.xml file.
+The Campaign.xml file is required to tell the game what your Campaign is named, what the scenarios in the campaign are, and the order they show up in.  Missions are played in the order that they are set in the Campaign.xml file. 
+Including multiple .xml files in the same Campaign folder does not appear to work at this time, and are read by the game in alphabetical order.
 
 For examples look at:
 - [The example included here](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/TutorialCampaign/game/campaign/LearnToPlay/ltpc.xml)
@@ -42,7 +43,7 @@ Each Scenario should start and end with a `<CampaignNode> </CampaignNode>` and c
 |`<PinXPosition>`|The X coordinate of where the Pin is placed on the map.  Appears to be percentage based, and should be between 0.0 and 1.0|
 |`<PinYPosition>`|The Y coordinate of where the Pin is placed on the map. Appears to be percentage based, and should be between 0.0 and 1.0|
 |`<PinZoom>`|Controls how zoomed out the map is for numbers between 0.0 and 1.0.  Numbers above 1.0 default to 1.0 zoom.  The lower the number the more zoomed out the map is.|
-|`<PrereqScenarioFile>`|Should match the `<Filename>` of the Scenario that takes place before this.  This tag hides the Scenario until the PrereqScenario is beaten.  If this tag is NOT included, then it will always be visible and selectable.|
+|`<PrereqScenarioFile>`|Should match the `<Filename>` of the Scenario that takes place before this.  This tag hides the Scenario until the PrereqScenario is beaten.  If this tag is NOT included, then it will always be visible and selectable.  This does not determine the order missions are played in, just when they become visible, missions are played in the order listed.|
 |`<HasPrompt/>`|Creates a Yes/No Prompt when selecting the mission to load the Scenario listed before this one in the .xml file.  In the Default Campaign this is used to load the `tutorial\ccnor` Norse Tutorial, which is listed as a hidden scenario in the tgg.xml and mythb.xml.  Requires a `<PromptStringID>` tag to have a description.|
 |`<PromptStringID>`|Gives the above tag a description. ![image](https://github.com/user-attachments/assets/20d3aa1e-0fca-4dae-8cab-93b7fddd5c13)|
 |`<Visible>`|When set to 0 hides the campaign from the mission list. Not needed if the mission is meant to be visible.  Typically used for Cinematic Scenarios or Prompted tutorials.|
