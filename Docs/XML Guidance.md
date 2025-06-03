@@ -3,7 +3,7 @@
 ## The Main .xml File
 `game\campaign\YourCampaignName\YourCampaignName.xml`
 
-The Campaign.xml file is required to tell the game what your Campaign is named, what the scenarios in the campaign are, and the order they show up in.  Missions are played in the order that they are set in the Campaign.xml file. 
+The Campaign.xml file is required to tell the game what your Campaign is named, what the scenarios in the campaign are, and the order they show up in.  Missions are played in the order that they are set in the Campaign.xml file.   
 Including multiple .xml files in the same Campaign folder does not appear to work at this time, and are read by the game in alphabetical order.
 
 For examples look at:
