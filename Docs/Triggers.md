@@ -8,6 +8,7 @@ The Condition Scenario: Difficulty Level features difficulties from the Skirmish
 | -  | Story Mode  |
 | Standard  |  Standard  |
 | Moderate  |  Moderate  |
+| Hard  |  Hard  |
 | Titan  |  Titan  |
 | Extreme  |  -    |
 | Legendary  |  -   |
@@ -32,7 +33,7 @@ Campaign Progression is largely handled by the [Campaign.xml](https://github.com
 | ------------- | ------------- | ------------- |
 | Campaign: Advance to the Next Mission  | Immediately loads the next mission in order.  Typically used to automatically load a separate cinematic mission upon winning a playable mission.|
 | Campaign: Advance to the Next Mission Prompt |  Loads a Prompt for the player to choose to Quit or advance to the next mission.  Used between missions that have no separate cinematic scenario, or at the end of a cinematic scenario to act as the real "ending".|![image](https://github.com/user-attachments/assets/3e206ffc-f4e1-43db-b13c-402fa66c3af0)|
-| Campaign: Advance to the Next Mission Prompt Skip |  An odd trigger.  This allows custom text with a Yes or No.  Clicking Yes Returns player to the standard Victory Screen, Clicking No displays a standard Campaign Advancement Prompt from above.  If the Display Prompt option is set to OFF, then both buttons return players to the standard victory screen. |![image](https://github.com/user-attachments/assets/6873e728-cea0-44d5-bd36-f51c6de0b947)|
+| Campaign: Advance to the Next Mission Prompt Skip |  This trigger is used in the campaign for prompting the player to view hidden tutorial missions.  This allows custom text with a Yes or No.  Clicking Yes advances the player to the next mission immediately, Clicking No brings up a standard campaign advancement prompt which skips the next mission, and advances to one beyond.  It should be noted that the 3rd mission should have a pre-requisite of the 1st mission, in the case of the 2nd mission being skipped and the player decides to Quit the campaign, having the pre-requisite setup this way ensures Mission 3 will be visible upon returning to the Campaign.  If the Display Prompt option is set to OFF, then both buttons return players to the standard victory screen (if there is something I am missing here, please let me know). |![image](https://github.com/user-attachments/assets/6873e728-cea0-44d5-bd36-f51c6de0b947)|
 | Campaign: Lose Mission |  Prompts a defeat |![image](https://github.com/user-attachments/assets/988bbf2a-ef75-4d77-8d59-fe70fb3313f2)|
 | Campaign: Start New Campaign |  Allows custom text, and will load the 1st mission of the listed [Campaign.xml file](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/XML%20Guidance.md).  This should just be `YourCampaignFolderName\YourCampaign.xml` that is contained with the `game\campaign` folder. If the Filepath is not valid, nothing will load.   |![image](https://github.com/user-attachments/assets/ff8646f5-9ad0-4cf0-8831-8e5c0fbbae80)|
 | Tutorial: Advance to Fall of The Trident Campaign Prompt |  Prompts going to the FOTT Campaign   |![image](https://github.com/user-attachments/assets/af00b0fc-2559-4023-87f7-2b71fd6e1b26)|
@@ -56,8 +57,8 @@ The main Campaigns tend to use a fairly standard 5 Victory and Loss triggers, th
      - Timer Milliseconds `2000`
      - Cinematic: Fade Screen, Duration `2200`, Delay `1000`, Activate `Win_03`
      - Music: Stop / Sound: Block All Sounds
-- **Win_3**
+- **Win_03**
      - Campaign: Advance to the Next Mission / Campaign: Advance to the Next Mission Prompt
  
 ## Misc:
-It appears that Scenarios when part of a Campaign start in Cinematic Mode.  If the Mission is not intended to start in Cinematic Mode, you should have a Trigger to Enter and Exit Cinematic Mode immediately on start.
+It appears that Scenarios when part of a Campaign start without a UI.  If the mission does not start with a cinematic you should have a Trigger to Enter and Exit Cinematic Mode afterwards to prevent this, both effects can be part of the same trigger.
