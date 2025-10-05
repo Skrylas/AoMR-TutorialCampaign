@@ -59,6 +59,24 @@ The main Campaigns tend to use a fairly standard 5 Victory and Loss triggers, th
      - Music: Stop / Sound: Block All Sounds
 - **Win_03**
      - Campaign: Advance to the Next Mission / Campaign: Advance to the Next Mission Prompt
+
+## Persistant User Data:
+With the launch of Retold, Age of Mythology now supports saving Data between scenarios by default.  This is utilized by the default campaign to update and add visuals to the Greek main menu as you progress through Fall of the Trident.
+- These are stored in the `C:\Users\Usename\Games\Age of Mythology Retold\SteamID\user\UserProfile.xml`
+- When a Scenario processes saving the UserData, they are saved under a `<scenariodata name="ScenarioName">` tag.
+     - You are given 16 Variable Index slots (0-15) per scenario, and each Variable is stored as an integer (whole number).
+     - If one has more than 15 Variables per scenario to carry between their campaign scenarios, you could add multiple variables together, for example using one variable in the Tens place, and another in the Hundreds place.
  
+- **Triggers**
+     - **User: Set Scenario User Data**: Sets an Index Variable to the value you choose.
+     - **Quest Variable: Set Scenario User Data**: Sets an Index Variable to the value equal to a Quest Variable.  You can utilize other Quest Variable triggers to modify this value.
+     - **Quest Variable: Get Scenario User Data**: Obtains the Variable set in the prior two trigger effects.  The Name field is the Name of the Scenario, this will be the `<scenariodata name="ScenarioName">` tag in the `UserProfile.xml`.
+
+## External UI:
+With the launch of Heavenly Spear, a new trigger function was introduced, allowing the loading of UI elements from an .xaml file.  This is utilized in only one place, the title card of the Heavenly Spear campaign during its opening cinematic.  
+     - **UI: Load Custom UI Resources**: `/Content/InGame/HUD_CampaignResources_YAS.xaml`.  
+     - To unload this resource, the same Trigger Effect is then utilized with no resource path.  
+
 ## Misc:
 It appears that Scenarios when part of a Campaign start without a UI.  If the mission does not start with a cinematic you should have a Trigger to Enter and Exit Cinematic Mode afterwards to prevent this, both effects can be part of the same trigger.
+
