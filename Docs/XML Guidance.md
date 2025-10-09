@@ -37,7 +37,7 @@ Each Scenario should start and end with a `<CampaignNode> </CampaignNode>` and c
 |`<DisplayNameStringID>`|References a StringID in your StringMods or the default StringTable for the name of the scenario.|
 |`<RolloverStringID>`|References a StringID in your StringMods or the default StringTable for the description of the scenario.  Appears at the bottom of the campaign window.|
 |`<BackgroundImage>`|The image that appears in the faded background and the visible foreground when loading a mission|
-|~~`<LoadImage>`~~|Does not appear to do anything.  The Default Campaigns always have this set to match the filepath of `<BackgroundImage>`, as that controls both the background and foreground image while loading, it is not apparent what this tag controls.|
+|~~`<LoadImage>`~~|Not apparent what this does, and appears to do nothing.  The Default Campaigns always have this set to match the filepath of `<BackgroundImage>`, testing indicates that controls both the background and foreground image while loading and this tag is unneeded.|
 |`<MapImageOverride>`|Loads a different map than the default when this mission is selected. Default maps are stored in `game\art\ui\campaign_map`|
 |`<PinImage>`|The map character/pin that displays on the map when the mission is selected. Default pins are stored in`game\art\ui\campaign_map\pins`.  See [this guide by Modding AoM](https://www.youtube.com/watch?v=Fu3XmTmEubc) for creating custom Pins.|
 |`<PinXPosition>`|The X coordinate of where the Pin is placed on the map.  Appears to be percentage based, and should be between 0.0 and 1.0|
@@ -48,6 +48,11 @@ Each Scenario should start and end with a `<CampaignNode> </CampaignNode>` and c
 |`<PromptStringID>`|Gives the above tag a description. ![image](https://github.com/user-attachments/assets/20d3aa1e-0fca-4dae-8cab-93b7fddd5c13)|
 |`<Visible>`|When set to 0 hides the campaign from the mission list. Not needed if the mission is meant to be visible.  Typically used for Cinematic Scenarios or Prompted tutorials.|
 |`<Cinematic>`|When set to 1 marks the mission as a cinematic.  It is not used on non-cinematic missions.  It is not apparent what this does.|
-|`<PlayCinematic/>`| Introduced in POTG and only used in the POTG.xml on all missions that precede a Cinematic Mission.  Appears to replace the prior `Cinematic` tag, as POTG cinematics are not tagged as cinematics, instead tagging the prior mission with this.|
+|`<PlayCinematic/>`| Introduced in POTG and only used in the POTG.xml on all missions that precede a Cinematic Mission.  Appears to replace the `Cinematic` tag, as POTG cinematics are not tagged as cinematics, instead tagging the prior mission with this. However this tag was oddly not used in the subsequently released Heavenly Spear campaign.|
 
-
+## Misc Notes
+- Including multiple campaign.xml within a single Campaign folder does not appear to work, and the game will only load the first campaign.xml in alphabetical order.
+- The order of campaign missions can be influenced through a combination of the above tags and the usage of [Triggers](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Triggers.md) to advance to the correct mission.
+     - These triggers combed with the correct tags are how the base game handles hidden tutorial missions, and cinematics.
+     - The game by default does not support branching campaign paths, but multiple scenarios with the same pre-requisite scenario can have triggers setup to skip a mission to the desired mission based on saved user variables
+           -   For example, Mission 1 can load into 1a, then immediately skip and load 1b.
