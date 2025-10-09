@@ -114,6 +114,7 @@ Publishing on the Website requires making a .zip filder of your mod/campaign
 ### Differences between the two
 - The website has higher res photos
     - And allows for up to 5 photos while the in-game mod manager only allows 1.
+    - **Note:** If you upload 5 images to the website, and then update your mod using the in-game mod manager it seems to revert the mod to the single photo from the in-game manager, which also lowers its resolution.
 - The website allows for people to leave comments when they leave a review, in-game they can only leave a star rating.
 - The website has a Changelog feature, allowing you to leave a record of your changes.
      - The changelog does not show in-game, for this reason I personally tend to leave important changes in the mod description.
