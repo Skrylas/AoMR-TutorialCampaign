@@ -1,7 +1,7 @@
 # Triggers
 
 ## Difficulty:
-Difficulty for Campaigns overlaps with standard Skirmish/Scenario gameplay, with the exception of Story Mode and Ludicrous Difficulty.
+Difficulty for Campaigns overlaps with standard Skirmish/Scenario gameplay, with some exceptions as seen in the below table.
 The Condition Scenario: Difficulty Level features difficulties from the Skirmish Column below:
 | Skirmish Difficulties  | Campaign Difficulties |
 | ------------- | ------------- |
@@ -79,4 +79,5 @@ With the launch of Heavenly Spear, a new trigger function was introduced, allowi
 
 ## Misc:
 It appears that Scenarios when part of a Campaign start without a UI.  If the mission does not start with a cinematic you should have a Trigger to Enter and Exit Cinematic Mode afterwards to prevent this, both effects can be part of the same trigger.
+
 
