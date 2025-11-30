@@ -16,12 +16,12 @@ game
 │       ├───YOUR_CAMPAIGN_NAME.xml
 │       └───YOUR_SCENARIOS.mythscn
 ├───data
-│   └───strings
-│       ├───english**
-│       │    └───stringmods.txt
-│       └───gameplay*
-│            ├───techtree_mods.xml*
-│            └───proto_mods.xml*
+│   ├───strings
+│   │   └───english**
+│   │       └───stringmods.txt
+│   └───gameplay*
+│       ├───techtree_mods.xml*
+│       └───proto_mods.xml*
 ├───sound*
 │   └──YOUR_CAMPAIGN_NAME*
 │       └───YOUR_SOUNDS.mp3*
