@@ -78,6 +78,11 @@ With the launch of Heavenly Spear, a new trigger function was introduced, allowi
      - To unload this resource, the same Trigger Effect is then utilized with no resource path.  
 
 ## Misc:
-It appears that Scenarios when part of a Campaign start without a UI.  If the mission does not start with a cinematic you should have a Trigger to Enter and Exit Cinematic Mode afterwards to prevent this, both effects can be part of the same trigger.
+There appears to be a potential bug that Scenarios in a Campaign may start without a UI.  If a mission does not start with a cinematic you should create a Trigger to Enter and Exit Cinematic Mode to prevent this, both effects can be part of the same trigger.
 
+## Alternate Player
+<img align="right" src="https://github.com/user-attachments/assets/0bad4cde-cb3e-4137-b602-f63db174c8d1"> Popular with alternate scenario missions where players play the role of a villain or supporting town, if you wish to edit a scenario, or create a scenario in which the player plays as any slot other than Player 1, this can simply be done by changing the Active Player selection within the editor in the upper-right navigation bar of the editor:
 
+This will prompt a warning that the Active Player is not set to Player 1 upon Saving the scenario; Click Yes.
+- Don't forget to set the PlayerData to Human for the actively controlled player in the scenario data along with any other adjusted player data required.
+- Upon loading the scenario in the campaign the player will control the set player number.
