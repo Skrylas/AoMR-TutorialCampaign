@@ -54,20 +54,21 @@ You can also include Subfolders, such as a `game\campaign\YourCampaignName\cinem
     - This can allow you to reference other campaigns, or even include two campaigns inside the same Mod that reference each other.
 
 ### Data Folder:
-This folder is included for a `Stringmods.txt` file.
-- This includes Text strings that tell the game what your campaign is named, and the name of your scenarios.  These will be referenced in the above campaign.xml file.
-Stringmods can also be used to create recurring strings of text for your campaign, such as Civ names, Dialogue, etc.  You can also reference the existing base strings included in the game.
+This folder is required to include a `Stringmods.txt` file.
+- Stringmods.txt includes Text strings that tell the game what your campaign is named, and the name of your scenarios.  These will be referenced in the above campaign.xml file.
+Stringmods can also be used to create recurring strings of text for your campaign, such as Civilization names, Character names, Dialogue, etc.  Any piece of text your campaign may contain.  You can also reference the existing base strings included in the game.
 - [Strings guide](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Strings.md) includes some things that can be accomplished with Stringmods.
+- This file is required for the Campaign Name and Scenario Names, but using strings for in-game text also allows you to create a single file for all text in your missions to be reviewed and edited in one location.
 
-The Data folder can also include various datamods that are included as part of your campaign these can include Proto and TechTree mods if you have them.
-This guide won't get into data modding.
+The Data folder can also include various datamods that are included as part of your campaign these can include `Proto_Mods.xml` and `TechTree_Mods.xml` if you have them within a `gameplay` subfolder, along with any other data modifications you may want to include.
+This guide will not cover data modding.
 
 - **Note:** When you upload your Campaign into the Mod Manager, it will be automatically tagged as a Datamod due to the inclusion of a Data folder.  But Stringmods.txt do **NOT** count as a Datamod for purposes of Multiplayer, or Celestial Challenges.  If you upload it on the website, the Datamod checkbox will be automatically checked, but you can manually uncheck this.
 - **Datamodding:** While Datamodding will require your campaign to be toggled off to play Ranked or Celestial Challenges, there is little downside to this, and can enhance your Campaign's functionality.  
     - The [Crybar Editor](https://github.com/CryShana/CryBarEditor/tree/main) includes a guide on [modding basics](https://github.com/CryShana/CryBarEditor/blob/main/Documentation/Modding.md).
     - It is highly reccomended to make your DataMods Additive to maintain compatibility with new civs, content and patches the Devs may add, and compatibility with your fellow modders.
 
-### Sound Folder:
+### Sound Folder (optional):
 Can contain any sounds you want to reference in your campaign.  As long as the file-path matches, these can be played in a Dialogue or Sound trigger.
 These **DO NOT** need to be in the new FMOD/Bank format.  Including standard .mp3 or .wav can be played without issue.
 
@@ -76,7 +77,7 @@ To reference sounds used in this folder in a Dialogue or Sound trigger, the path
     - To prevent conflicts with other campaigns, it is recommended that you include a Subfolder of your Campaign name of `game\sound\YourCampaignName\Example.mp3` to be referenced in game as `YourCampaignName\Example.mp3`
     - Sounds must be inside the Sound folder, for example a default sound is played by referencing `events\win.wav` which is contained inside `game\sound\events\win.wav`
 
-### UI Folder:
+### UI Folder (optional):
 Can contain any UI elements you wish to reference in your campaign:
 - Talking heads, icons, spotlight images, campaign map backgrounds, pins, loading screens, etc.
 - The file-path must just match when they are referenced.
