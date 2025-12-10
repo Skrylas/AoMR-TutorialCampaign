@@ -61,6 +61,7 @@ Stringmods can also be used to create recurring strings of text for your campaig
 - This file is required for the Campaign Name and Scenario Names, but using strings for in-game text also allows you to create a single file for all text in your missions to be reviewed and edited in one location.
 
 The Data folder can also include various datamods that are included as part of your campaign these can include `Proto_Mods.xml` and `TechTree_Mods.xml` if you have them within a `gameplay` subfolder, along with any other data modifications you may want to include.
+
 This guide will not cover data modding.
 
 - **Note:** When you upload your Campaign into the Mod Manager, it will be automatically tagged as a Datamod due to the inclusion of a Data folder.  But Stringmods.txt do **NOT** count as a Datamod for purposes of Multiplayer, or Celestial Challenges.  If you upload it on the website, the Datamod checkbox will be automatically checked, but you can manually uncheck this.
