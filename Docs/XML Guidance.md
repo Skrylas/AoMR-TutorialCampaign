@@ -4,7 +4,7 @@
 `game\campaign\YourCampaignName\YourCampaignName.xml`
 
 The Campaign.xml file is required to tell the game what your Campaign is named, what the scenarios in the campaign are, and the order they show up in.  Missions are played in the order that they are set in the Campaign.xml file.   
-Including multiple .xml files in the same Campaign folder does not appear to work at this time, and are read by the game in alphabetical order.
+Including multiple .xml files in the same CampaignName folder does not appear to work at this time, and are read by the game in alphabetical order.
 
 For examples look at:
 - [The example included here](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/TutorialCampaign/game/campaign/LearnToPlay/ltpc.xml)
