@@ -21,7 +21,9 @@ Your Campaign info itself is handled by the base information at the top:
 | Campaign Header Tag | Effect |
 |----|----|
 |`<DisplayNameStringID>`|References a StringID in your StringMods or the default StringTable for the name of your campaign.|
+|`<DisplayName>`|An alternative to the above for direct text without a StringID.  This is unused by the default campaigns but is functional.  Type the text as it should appear.|
 |~~`<RolloverStringID>`~~|References a StringID in your StringMods or the default StringTable for the description of the campaign.  Custom Campaigns do not appear to have a visibile description.  This is also evidenced by the Mythical Battle using a filler StringText for its description.|
+|~~`<Rollover>`~~|A direct text version of the above without relying on Strings.  As above, Custom Campaigns do not appear to have visible descriptions.|
 |~~`<MotifImage>`~~|The image that appears in a campaign's box.  Custom campaigns and Mythical Battles do not appear to ever show this.  The Mythical Battle .xml uses the FOTT Motif as filler.|
 |`<MapImage>`|The map that your campaign is based on, where pins will be placed.  Default maps are stored in `game\art\ui\campaign_map`.  Excluding this tag will load a generic background, but not allow Pins to show, there needs to be a map for them to be placed on.|
 |~~`<CompendiumImage>`~~|Only for default campaigns, unless you were going to edit the Compendium files.|
@@ -35,7 +37,9 @@ Each Scenario should start and end with a `<CampaignNode> </CampaignNode>` and c
 |----|----|
 |`<Filename>`|The filepath for the scenario.  This should be the `CampaignFolder\ScenarioName`.  This can also reference different campaigns and campaign folders.|
 |`<DisplayNameStringID>`|References a StringID in your StringMods or the default StringTable for the name of the scenario.|
+|`<DisplayName>`|An alternative to the above for direct text without a StringID.  This is unused by the default campaigns but is functional.  Type the text as it should appear.|
 |`<RolloverStringID>`|References a StringID in your StringMods or the default StringTable for the description of the scenario.  Appears at the bottom of the campaign window.|
+|`<Rollover>`|Same as the above option, but without referencing a StringID.  Type the text as it should appear.|
 |`<BackgroundImage>`|The image that appears in the faded background and the visible foreground when loading a mission|
 |~~`<LoadImage>`~~|Not apparent what this does, and appears to do nothing.  The Default Campaigns always have this set to match the filepath of `<BackgroundImage>`, testing indicates that controls both the background and foreground image while loading and this tag is unneeded.|
 |`<MapImageOverride>`|Loads a different map than the default when this mission is selected. Default maps are stored in `game\art\ui\campaign_map`|
