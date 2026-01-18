@@ -58,7 +58,7 @@ Each Scenario should start and end with a `<CampaignNode> </CampaignNode>` and c
      - UI and graphic related tags may be excluded, the game will continue to load missions simply without an image.
 
 ## Misc Notes
-- Including multiple campaign.xml within a single Campaign folder does not appear to work, and the game will only load the first campaign.xml in alphabetical order.
+- Including multiple campaign.xml within a single CampaignName folder does not appear to work, and the game will only load the first campaign.xml in alphabetical order.
 - The order of campaign missions can be influenced through a combination of the above tags and the usage of [Triggers](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Triggers.md) to advance to the correct mission.
      - These triggers combed with the correct tags are how the base game handles hidden tutorial missions, and cinematics.
      - The game by default does not support branching campaign paths, but multiple scenarios with the same pre-requisite scenario can have triggers setup to skip a mission to the desired mission based on saved user variables
