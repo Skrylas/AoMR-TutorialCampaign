@@ -4,9 +4,11 @@
 
 <Campaign>
 <!-- This section includes your base campaign data -->
-	<!-- This is the name and description of your campaign, as it appears in the Custom Campaign menu, this references text in your stringmods.txt -->
+	<!-- This is the name and description of your campaign, as it appears in the Custom Campaign menu, this references text in your stringmods.txt 
+	An alternative is to use <DisplayName></DisplayName> with no strings. -->
     <DisplayNameStringID>STR_L2P_CAMPAIGN</DisplayNameStringID>
-	<!-- The Description of your campaign, custom campaigns appear to not have one -->
+	<!-- The Description of your campaign, custom campaigns appear to not have one 
+	An alternative is to utilize <Rollover></Rollover> with no string. -->
     <RolloverStringID>STR_L2P_CAMPAIGN_TOOLTIP</RolloverStringID>
 	<!-- MotifImage is the shiny metallic icon for the base campaigns - custom campaigns don't appear to display one -->
     <MotifImage>/resources/front_end_demo/Foil_FOTT.png</MotifImage>
