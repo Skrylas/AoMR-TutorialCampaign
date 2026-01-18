@@ -1,7 +1,9 @@
 # Strings
 
-Strings file is required for Campaign Names and Descriptions, but can also be used for any other text in the game.
-Utilizing Strings allows you to put all text in a single file/location for proof-reading and editing, and strings can be reused across your missions, allowing a single edit to change all instances.
+A Strings file is optional for Campaigns, but is required for files utilizing `<DisplayNameStringID>` rather than `<DisplayName>` and `<RolloverStringID>` rather than `<Rollover>` for Campaign Scenario Names and Descriptions in the [Campaign.xml](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/XML%20Guidance.md).
+
+But a Strings file can also be used for any other text in the game.
+Utilizing a Strings file allows you to put all text in a single file/location for proof-reading and editing, and strings can be reused across your missions, allowing a single edit to change all instances.
 
 ## File Setup
 For examples look at:
@@ -54,5 +56,6 @@ Images can be included in Strings: `<icon=\"(X,Y)(imagepath\image.png)\">`
     - This shows it is impossible to resize images.  As the Vertical is too small, the entire image becomes resized to its proportion.
 
   
+
 
 
