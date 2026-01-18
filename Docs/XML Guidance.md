@@ -54,6 +54,9 @@ Each Scenario should start and end with a `<CampaignNode> </CampaignNode>` and c
 |`<Cinematic>`|When set to 1 marks the mission as a cinematic.  It is not used on non-cinematic missions.  It is not apparent what this does.|
 |`<PlayCinematic/>`| Introduced in POTG and only used in the POTG.xml on all missions that precede a Cinematic Mission.  Appears to replace the `Cinematic` tag, as POTG cinematics are not tagged as cinematics, instead tagging the prior mission with this. However this tag was oddly not used in the subsequently released Heavenly Spear campaign.|
 
+- Mandatory tags are: `<Filename>` and `<DisplayName>` (with or without StringID), all other tags are optional.
+     - UI and graphic related tags may be excluded, the game will continue to load missions simply without an image.
+
 ## Misc Notes
 - Including multiple campaign.xml within a single Campaign folder does not appear to work, and the game will only load the first campaign.xml in alphabetical order.
 - The order of campaign missions can be influenced through a combination of the above tags and the usage of [Triggers](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Triggers.md) to advance to the correct mission.
