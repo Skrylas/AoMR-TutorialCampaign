@@ -15,10 +15,10 @@ game
 │   └───YOUR_CAMPAIGN_NAME
 │       ├───YOUR_CAMPAIGN_NAME.xml
 │       └───YOUR_SCENARIOS.mythscn
-├───data
-│   ├───strings
+├───data*
+│   ├───strings*
 │   │   └───english**
-│   │       └───stringmods.txt
+│   │       └───stringmods.txt*
 │   └───gameplay*
 │       ├───techtree_mods.xml*
 │       └───proto_mods.xml*
@@ -53,9 +53,10 @@ You can also include Subfolders, such as a `game\campaign\YourCampaignName\cinem
 - This is purely for organizational purposes to help keep track of your missions.  The .xml file can reference any folders or subfolders contained within the main `game\campaign` folder.
     - This can allow you to reference other campaigns, or even include two campaigns inside the same Mod that reference each other.
 
-### Data Folder:
-This folder is required to include a `Stringmods.txt` file.
-- Stringmods.txt includes Text strings that tell the game what your campaign is named, and the name of your scenarios.  These will be referenced in the above campaign.xml file.
+### Data Folder (optional):
+This folder is to include a `Stringmods.txt` file.
+- Stringmods.txt includes Text strings that your campaign may make use of.  
+    - This can include the name of your campaign and the name of your scenarios, which can be referenced in the above campaign.xml file if StringID versions of DisplayName and RollOver are utilized.
 Stringmods can also be used to create recurring strings of text for your campaign, such as Civilization names, Character names, Dialogue, etc.  Any piece of text your campaign may contain.  You can also reference the existing base strings included in the game.
 - [Strings guide](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Strings.md) includes some things that can be accomplished with Stringmods.
 - This file is required for the Campaign Name and Scenario Names, but using strings for in-game text also allows you to create a single file for all text in your missions to be reviewed and edited in one location.
