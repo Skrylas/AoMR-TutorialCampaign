@@ -39,7 +39,7 @@ game
 
 The above file structure largely replicates the base AOMR file structure.
 
-As noted, the only 2 mandatory folders are the actual Campaign folder, which contains your scenarios, and the Strings folder which tells the game what the name of the Campaign and the Scenarios are.
+As noted, the only mandatory folder is the actual Campaign folder, which contains your scenarios.
 
 ### Campaign Folder:
 The Campaign folder will contain two things ([Tutorial Example](https://github.com/Skrylas/AoMR-TutorialCampaign/tree/main/TutorialCampaign/game/campaign/LearnToPlay)):
@@ -56,12 +56,12 @@ You can also include Subfolders, such as a `game\campaign\YourCampaignName\cinem
     - This can allow you to reference other campaigns, or even include two campaigns inside the same Mod that reference each other.
 
 ### Data Folder (optional):
-This folder is typically used to include a `Stringmods.txt` file.
+This folder is typically used to include a `stringmods.txt` file.
 - Stringmods.txt includes Text strings that your campaign may make use of.  
     - This can include the name of your campaign and the name of your scenarios, which can be referenced in the above campaign.xml file if StringID versions of DisplayName and RollOver are utilized.
     - Stringmods can also be used to create recurring strings of text for your campaign, such as Civilization names, Character names, Dialogue, etc.  Any piece of text your campaign may contain.  You can also reference the existing base strings included in the game.
+    - Strings also allow for supporting multiple languages.  Rather than hard-coding dialogue and titles within the campaign.xml and scenario files, references to a strings file can be made which will automatically change all text when the player is using a supported language.
 - [Strings guide](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/Docs/Strings.md) includes some things that can be accomplished with Stringmods.
-- This file is required for the Campaign Name and Scenario Names, but using strings for in-game text also allows you to create a single file for all text in your missions to be reviewed and edited in one location.
 
 The Data folder can also include various datamods that are included as part of your campaign these can include `Proto_Mods.xml` and `TechTree_Mods.xml` if you have them within a `gameplay` subfolder, along with any other data modifications you may want to include.
 
