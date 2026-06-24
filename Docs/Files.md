@@ -35,7 +35,7 @@ game
 
   `*  optional files - can be included if your campaign makes use of them.`  
   `** or another language or multiple language folders`  
-  		`Note that Language folders must be Capitalized (English, French, etc.)  Lowercase language folders will fail to support multiple langauges.` 
+  		`Note that Language folders must be Capitalized (English, French, etc.)  Lowercase language folders will fail to support multiple languages.` 
 
 The above file structure largely replicates the base AOMR file structure.
 
