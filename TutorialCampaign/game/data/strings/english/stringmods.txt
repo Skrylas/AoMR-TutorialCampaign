@@ -1,6 +1,3 @@
-Language = "English"
-IsRtl = "False"
-
 ID = "STR_L2P_CAMPAIGN"   ;   Str = "Learn to Play"
 ID = "STR_L2P_CAMPAIGN_TOOLTIP"   ;   Str = "Discover what you will see and do while playing Age of Mythology."
 ID = "STR_L2P1_CAMPAIGN"   ;   Str = "Hunt for a Killer"
