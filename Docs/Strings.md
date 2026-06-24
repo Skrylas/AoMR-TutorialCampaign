@@ -7,18 +7,16 @@ Utilizing a Strings file allows you to put all text in a single file/location fo
 
 ## File Setup
 For examples look at:
-- [The example included here](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/TutorialCampaign/game/data/strings/english/stringmods.txt)
+- [The example included here](https://github.com/Skrylas/AoMR-TutorialCampaign/blob/main/TutorialCampaign/game/data/strings/English/stringmods.txt)
 - The default files located at `game\data\strings` (requires a .BAR extractor)
 
-Your file should include these two lines:
-```
-Language = "English"
-IsRtl = "False"
-```
-And then an Entry for each String.
+Within your stringmods.txt file, add an Entry for each String:
 `ID = "YOUR_STRING_ID"   ;   Str = "Your text here."`
-The string ID should be Unique, and the text contained within the two quotes can be anything, and can include icons and color tags as described below.
+The string ID should be Unique (but can be shared across languages), and the text contained within the two quotes can be anything, and can include icons and color tags as described below.
 
+#### Multiple Languages
+If you wish to support multiple languages, add a folder for each language that you wish to support.  
+Language folders *must* be capitalized (English, French, etc.).  If they are not, the game will not properly swap between languages.
 
 ## Text Strings
 Text strings in the `stringmods.txt` file can include colors and images.
