@@ -17,7 +17,9 @@ game
 │       └───YOUR_SCENARIOS.mythscn
 ├───data*
 │   ├───strings*
-│   │   └───english**
+│   │   ├───English**
+│   │   │   └───stringmods.txt*
+│   │   └───French**
 │   │       └───stringmods.txt*
 │   └───gameplay*
 │       ├───techtree_mods.xml*
@@ -31,9 +33,9 @@ game
             └───CAMPAIGN_IMAGES.png*
 ```
 
-  `*  optional files - can be included if your campaign makes use of them`  
-  `** or another language or multiple`  
-  		`Currently there appears to be an issue where multiple languages cannot be properly swapped between in custom campaigns.  If someone discovers that this has been fixed, please let me know.`  
+  `*  optional files - can be included if your campaign makes use of them.`  
+  `** or another language or multiple language folders`  
+  		`Note that Language folders must be Capitalized (English, French, etc.)  Lowercase language folders will fail to support multiple langauges.` 
 
 The above file structure largely replicates the base AOMR file structure.
 
